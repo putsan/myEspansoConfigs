@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/espanso/espanso/dev/schemas/match.schema.json
+
+matches:
+  # Анг трансліт/відповідники
+  - trigger: "рідмі"
+    replace: "Readme"
+  - triggers: ["Markd", "маркд", "md+"]
+    replace: "Markdown"
+  - triggers: ["веб+", "ВЕБ+", "цуи"]
+    replace: "WEB"
+  - triggers: ["АПІ+", "фзш", "апі+"]
+    replace: "API"
+  - triggers: ["конфіг"]
+    replace: "config"
+    word: true
+  - triggers: ["fos+", "foss+", "os+"]
+    replace: "Open Source"
+  - triggers: ["акуу", "фрі+"]
+    replace: "free"
+  - triggers: ["тріал", "екшфд"]
+    replace: "trial"
+  - triggers: ["фзз", "апка", "апку", "апп"]
+    replace: "app"
+    word: true
+  - trigger: "апок"
+    replace: "apps"
+    word: true
+  - triggers: ["Блютуз", "блютуз", "блю+", "идг+"]
+    replace: "Bluetooth"
