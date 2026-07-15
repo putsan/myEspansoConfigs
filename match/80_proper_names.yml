@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/espanso/espanso/dev/schemas/match.schema.json
+
+matches:
+  # Певні власні назви (some main)
+  - triggers: ["namir+", "тфьшк"]
+    replace: "namirGO"
+  - triggers: ["iphone", "шзрщту", "шзр+", "iph+", "Iphone"]
+    replace: "iPhone"
+  - triggers: ["mac+", "mackbook", "ьфс+"]
+    replace: "MackBook"
