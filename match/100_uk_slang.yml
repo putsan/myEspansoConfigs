@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/espanso/espanso/dev/schemas/match.schema.json
+
+matches:
+  # Сленг та Скорочення укр переважно
+  - trigger: "юзав+"
+    replace: "використовував"
+  - trigger: "юзають"
+    replace: "використовують"
+  - trigger: "магаз"
+    replace: "магазин"
+    word: true
+  - trigger: "днюхи+"
+    replace: "дня народження"
