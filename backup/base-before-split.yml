@@ -1,0 +1,334 @@
+# espanso match file
+
+# For a complete introduction, visit the official docs at: https://espanso.org/docs/
+
+# You can use this file to define the base matches (aka snippets)
+# that will be available in every application when using espanso.
+
+# Matches are substitution rules: when you type the "trigger" string
+# it gets replaced by the "replace" string.
+
+# yaml-language-server: $schema=https://raw.githubusercontent.com/espanso/espanso/dev/schemas/match.schema.json
+
+matches:
+  # Simple text replacement
+  - trigger: ":espanso"
+    replace: "Hi there!"
+
+  # NOTE: espanso uses YAML to define matches, so pay attention to the indentation!
+
+  # But matches can also be dynamic:
+
+  # Print the current date
+  - triggers: [":date", ":today"]
+    replace: "{{mydate}}"
+    vars:
+      - name: mydate
+        type: date
+        params:
+          format: "%d %m %Y"
+
+  # Print the output of a shell command
+  - trigger: ":shell"
+    replace: "{{output}}"
+    vars:
+      - name: output
+        type: shell
+        params:
+          cmd: "echo 'Hello from your shell'"
+
+  # And much more! For more information, visit the docs: https://espanso.org/docs/
+
+  # MY Matches
+  # ZERO for now
+
+  # Important symbols! (most on Cyrillic)
+  - trigger: "№"
+    replace: "#"
+    word: true
+  - trigger: "№№"
+    replace: "##"
+    word: true
+  - trigger: "№№№"
+    replace: "###"
+    word: true
+  - trigger: "№№№№"
+    replace: "####"
+    word: true
+  - trigger: "№№№№№"
+    replace: "#####"
+    word: true
+  - trigger: "№№№№№№"
+    replace: "######"
+    word: true
+
+  - trigger: "--"
+    replace: "—"
+    word: true
+  - trigger: ":грн"
+    replace: "₴"
+  - triggers: ["ʼʼ", '"+']
+    replace: "@"
+
+  # Emojis (most of for Obsidian)
+  - triggers: [":100", "100+"]
+    replace: "💯"
+  - triggers: [":^", "ршп+", "р+"]
+    replace: "🔺" # Obsidian
+    word: true
+  - triggers: ["ррр", hhh"]
+    replace: "⏫"
+  - triggers: ["ььь", "mmm"]
+    replace: "🔼"
+  - triggers: ["lll", "ддд"]
+    replace: "🔽"
+  - trigger: "д+"
+    replace: "⏬"
+  - triggers: ["dat+", "data+"]
+    replace: "dataview"
+
+  # Obsidian
+  - triggers: ["[[l", "[[л", "[[д"]
+    replace: " | [[fname|alt]]"
+  # - triggers: ["»»", ")_", ")+"] # isn't work first((
+  #   replace: ">"  # Don't needed anymore, [Alt + 7] combination are better, dont know before about))
+  - triggers: ["й»", "йЮ", "q>", "йю", "ЙЮ"]
+    replace: "> [!$|$]"
+  - triggers: ["-t", "-е"]
+    replace: "- [ ]"
+    word: true
+  - triggers: ["log+", "банка+"]
+    replace: "log::💌"
+
+  # App NAMES
+  - triggers: ["gh", "GH", "гх", "ГХ", "пр+", "пр="]
+    replace: "GitHub"
+    word: true
+  - trigger: "місщву"
+    replace: "VS Code"
+  - trigger: "пше"
+    replace: "git"
+  - triggers: ["докер", "Докер", "вщслук"]
+    replace: "Docker"
+  - triggers: ["RN+", "rn+", "кт+"]
+    replace: "React Native"
+
+  - triggers: ["Блу+", "блу+", "идг+", "Bly+", "blu+"]
+    replace: "Bluesky"
+    word: true
+  - triggers: ["ЮТ", "ют", "yy", "юю", "YT+", "yt+", "Ютуб+", "не+"]
+    replace: "YouTube"
+    word: true
+  - triggers: ["ЮМ", "юм"]
+    replace: "YT Music"
+    word: true
+  - triggers: ["DD", "діскор"]
+    replace: "Discord"
+  - triggers: ["реддіт", "reddit", "куввше", "кув+", "Реддіт"]
+    replace: "Reddit"
+  - triggers: ["ins+", "шті+", "інста", "Ins+"]
+    replace: "Instagram"
+    word: true
+  - triggers: ["in+", "linkedin", "шт+", "дшт+", "дштлувшт", "lin+"]
+    replace: "LinkedIn"
+    word: true
+  - triggers: ["ws+", "Whatsap", "WS+", "whatsapp", "ці+", "ЦІ+"]
+    replace: "WhatsApp"
+  - triggers: ["Win+", "win+", "він+"]
+    replace: "Windows"
+  - triggers: ["dji", "вош", "ВОШ"]
+    replace: "DJI"
+  - triggers: ["viber", "вайбер", "Вайбер"]
+    replace: "Viber"
+
+  - triggers: ["ТГ", "тг", "tg", "еп+"]
+    replace: "TG"
+  - triggers: ["пзе", "gpt", "жпт"]
+    replace: "GPT"
+  - triggers: ["Tel=", "tel=", "еудупкфь", "еуд="]
+    replace: "Telegram"
+  - triggers: ["спзе", "cgpt"]
+    replace: "Chat GPT"
+  - triggers:
+      [
+        "obs+",
+        "obsidian",
+        "обс+",
+        "щиі+",
+        "Обсідіан",
+        "обсідіан",
+        "щиішвшфт",
+        "Щиішвшфт",
+      ]
+    replace: "Obsidian"
+  - triggers: ["owc", "OWC", "щцс"]
+    replace: "Obsidian Web Clipper"
+  - triggers: ["espanso", "уізфтіщ", "уіз+"]
+    replace: "Espanso"
+  - triggers: ["cq+", "сй+", "сщзнй"]
+    replace: "CopyQ"
+  - triggers: ["сдфгвш", "claudie", "Claudie", "cl="]
+    replace: "Claude"
+  - triggers: ["Hil+", "ршд+", "ршдщлфд"]
+    replace: "Hilocal"
+  - triggers: ["Геміні", "геміні", "гем+"]
+    replace: "Gemini"
+
+  - triggers: ["фтвкщ", "andro", "фтв+"]
+    replace: "Android"
+  - triggers: ["іфь+", "sam+", "Sam+"]
+    replace: "Samsung"
+  - triggers: ["bit+", "ише+"]
+    replace: "Bitwarden"
+  - triggers: ["лінукс", "Лінукс", "linux"]
+    replace: "Linux"
+
+  # Espanso
+  - triggers: ["w:t", "ц+", "ц:", "wt+"]
+    replace: "word: true"
+  - triggers: ["es2", "уі2"]
+    replace: '- triggers: ["", ""]
+      replace: "$|$"'
+  - triggers: ["cdd+", "ccdd", "cdtd", "cdt+"]
+    replace: "config changes during today"
+
+  # Дописування/пропозиції слова (закінчення)
+  #  - trigger: "корист"
+  #    replace: "користується"
+  #  - trigger: "корист"
+  #    replace: "користуєтеся"
+  #  - trigger: "корист"
+  #    replace: "користуюся" # доопрацювати ці Корист треба!!))
+  #  - trigger: "корист"     # бо крім того що не всі закінчення є,
+  # то ще баги прога має на ці слова чомусь..
+  # тому поки відключив ці слова
+  #    replace: "користовувати"
+  #  - trigger: "корист"
+  #    replace: "користуватися"
+  #  - trigger: "корист"
+  #    replace: "користання"
+  #  - trigger: "корист"
+  #    replace: "користовував"
+  #  - trigger: "корист"
+  #    replace: "користовують"
+  #
+  #   MILL
+  - triggers: ["бомбік", "Бомбік"]
+    replace: "Bumblbee"
+    word: true
+
+  - trigger: "оф"
+    replace: "офіційні"
+    word: true
+
+  - trigger: "анг+"
+    replace: "англомовну"
+  - trigger: "Анг+"
+    replace: "Англійську"
+  - trigger: "укр+"
+    replace: "українська"
+  - trigger: "укр+"
+    replace: "українську"
+  - trigger: "укр+"
+    replace: "українській"
+  - trigger: "утп"
+    replace: "ENG"
+
+  - trigger: "кон+"
+    replace: "конфігурацію"
+  - triggers: ["конц+", "кон+"]
+    replace: "концентрації (без сповіщень)"
+  - trigger: "реа+"
+    replace: "реалізовано"
+  - trigger: "смарт+"
+    replace: "смартфон"
+  - trigger: "альт+"
+    replace: "альтернативні"
+
+  # Виправлення слів та помилок
+  - triggers: ["Гуглю", "гуглю"]
+    replace: "Ґуґлю"
+    word: true
+  - triggers: ["Гугл", "гугл"]
+    replace: "Ґуґл"
+    word: true
+  - trigger: "аудіочати"
+    replace: "аудіо-чати"
+  - trigger: "свому"
+    replace: "своєму"
+
+  # Суржик-— виправлення
+  - trigger: "загружений"
+    replace: "завантажений"
+
+  # Анг трансліт/відповідники
+  - trigger: "рідмі"
+    replace: "Readme"
+  - triggers: ["Markd", "маркд", "md+"]
+    replace: "Markdown"
+  - triggers: ["веб+", "ВЕБ+", "цуи"]
+    replace: "WEB"
+  - triggers: ["АПІ+", "фзш", "апі+"]
+    replace: "API"
+  - triggers: ["конфіг"]
+    replace: "config"
+    word: true
+  - triggers: ["fos+", "foss+", "os+"]
+    replace: "Open Source"
+  - triggers: ["акуу", "фрі+"]
+    replace: "free"
+  - triggers: ["тріал", "екшфд"]
+    replace: "trial"
+  - triggers: ["фзз", "апка", "апку", "апп"]
+    replace: "app"
+    word: true
+  - trigger: "апок"
+    replace: "apps"
+    word: true
+  - triggers: ["Блютуз", "блютуз", "блю+", "идг+"]
+    replace: "Bluetooth"
+
+  # Певні власні назви (some main)
+  - triggers: ["namir+", "тфьшк"]
+    replace: "namirGO"
+  - triggers: ["iphone", "шзрщту", "шзр+", "iph+", "Iphone"]
+    replace: "iPhone"
+  - triggers: ["mac+", "mackbook", "ьфс+"]
+    replace: "MackBook"
+
+  # Мої сніппети (Публічні тільки)
+  - triggers: ["шем+", "itv+"]
+    replace: "[Більше відібраних ІТ вакансій тут](https://t.me/+ampaIMJKmu8yODAy)"
+  - triggers: ["пгф+", "gua+"] # for GPT and others AI
+    replace: "Дай відповідь тільки українською мовою!"
+  - triggers: ["акщтеутв+", "ау+", "fe+"]
+    replace: "Front-end DEV"
+  - triggers: ["bio+", "ишщ+"]
+    replace: "https://putsan.bio.link"
+
+  # Сленг та Скорочення укр переважно
+  - trigger: "юзав+"
+    replace: "використовував"
+  - trigger: "юзають"
+    replace: "використовують"
+  - trigger: "магаз"
+    replace: "магазин"
+    word: true
+  - trigger: "днюхи+"
+    replace: "дня народження"
+
+  # Абревіатури
+  - triggers: ["seo", "іущ", "ІУЩ"]
+    replace: "SEO"
+  - triggers: ["foss+", "ащіі", "АЩІІ"]
+    replace: "FOSS"
+  - triggers: ["мзт", "vpn"]
+    replace: "VPN"
+  - triggers: ["usb", "гіи", "ГІИ"]
+    replace: "USB"
+  - triggers: ["тас+", "nfc", "ТАС"]
+    replace: "NFC"
+  - triggers: ["ІЗФ", "ізф"]
+    replace: "SPA"
+  - triggers: ["нгу"]
+    replace: "НГУ"
