@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/espanso/espanso/dev/schemas/match.schema.json
+
+matches:
+  # Important symbols! (most on Cyrillic)
+  - trigger: "№"
+    replace: "#"
+    word: true
+  - trigger: "№№"
+    replace: "##"
+    word: true
+  - trigger: "№№№"
+    replace: "###"
+    word: true
+  - trigger: "№№№№"
+    replace: "####"
+    word: true
+  - trigger: "№№№№№"
+    replace: "#####"
+    word: true
+  - trigger: "№№№№№№"
+    replace: "######"
+    word: true
+
+  - trigger: "--"
+    replace: "—"
+    word: true
+  - trigger: ":грн"
+    replace: "₴"
+  - triggers: ["ʼʼ", '"+']
+    replace: "@"
