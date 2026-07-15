@@ -1,0 +1,85 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/espanso/espanso/dev/schemas/match.schema.json
+
+matches:
+  # App NAMES
+  - triggers: ["gh", "GH", "гх", "ГХ", "пр+", "пр="]
+    replace: "GitHub"
+    word: true
+  - trigger: "місщву"
+    replace: "VS Code"
+  - trigger: "пше"
+    replace: "git"
+  - triggers: ["докер", "Докер", "вщслук"]
+    replace: "Docker"
+  - triggers: ["RN+", "rn+", "кт+"]
+    replace: "React Native"
+
+  - triggers: ["Блу+", "блу+", "идг+", "Bly+", "blu+"]
+    replace: "Bluesky"
+    word: true
+  - triggers: ["ЮТ", "ют", "yy", "юю", "YT+", "yt+", "Ютуб+", "не+"]
+    replace: "YouTube"
+    word: true
+  - triggers: ["ЮМ", "юм"]
+    replace: "YT Music"
+    word: true
+  - triggers: ["DD", "діскор"]
+    replace: "Discord"
+  - triggers: ["реддіт", "reddit", "куввше", "кув+", "Реддіт"]
+    replace: "Reddit"
+  - triggers: ["ins+", "шті+", "інста", "Ins+"]
+    replace: "Instagram"
+    word: true
+  - triggers: ["in+", "linkedin", "шт+", "дшт+", "дштлувшт", "lin+"]
+    replace: "LinkedIn"
+    word: true
+  - triggers: ["ws+", "Whatsap", "WS+", "whatsapp", "ці+", "ЦІ+"]
+    replace: "WhatsApp"
+  - triggers: ["Win+", "win+", "він+"]
+    replace: "Windows"
+  - triggers: ["dji", "вош", "ВОШ"]
+    replace: "DJI"
+  - triggers: ["viber", "вайбер", "Вайбер"]
+    replace: "Viber"
+
+  - triggers: ["ТГ", "тг", "tg", "еп+"]
+    replace: "TG"
+  - triggers: ["пзе", "gpt", "жпт"]
+    replace: "GPT"
+  - triggers: ["Tel=", "tel=", "еудупкфь", "еуд="]
+    replace: "Telegram"
+  - triggers: ["спзе", "cgpt"]
+    replace: "Chat GPT"
+  - triggers:
+      [
+        "obs+",
+        "obsidian",
+        "обс+",
+        "щиі+",
+        "Обсідіан",
+        "обсідіан",
+        "щиішвшфт",
+        "Щиішвшфт",
+      ]
+    replace: "Obsidian"
+  - triggers: ["owc", "OWC", "щцс"]
+    replace: "Obsidian Web Clipper"
+  - triggers: ["espanso", "уізфтіщ", "уіз+"]
+    replace: "Espanso"
+  - triggers: ["cq+", "сй+", "сщзнй"]
+    replace: "CopyQ"
+  - triggers: ["сдфгвш", "claudie", "Claudie", "cl="]
+    replace: "Claude"
+  - triggers: ["Hil+", "ршд+", "ршдщлфд"]
+    replace: "Hilocal"
+  - triggers: ["Геміні", "геміні", "гем+"]
+    replace: "Gemini"
+
+  - triggers: ["фтвкщ", "andro", "фтв+"]
+    replace: "Android"
+  - triggers: ["іфь+", "sam+", "Sam+"]
+    replace: "Samsung"
+  - triggers: ["bit+", "ише+"]
+    replace: "Bitwarden"
+  - triggers: ["лінукс", "Лінукс", "linux"]
+    replace: "Linux"
