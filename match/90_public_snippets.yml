@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/espanso/espanso/dev/schemas/match.schema.json
+
+matches:
+  # Мої сніппети (Публічні тільки)
+  - triggers: ["шем+", "itv+"]
+    replace: "[Більше відібраних ІТ вакансій тут](https://t.me/+ampaIMJKmu8yODAy)"
+  - triggers: ["пгф+", "gua+"] # for GPT and others AI
+    replace: "Дай відповідь тільки українською мовою!"
+  - triggers: ["акщтеутв+", "ау+", "fe+"]
+    replace: "Front-end DEV"
+  - triggers: ["bio+", "ишщ+"]
+    replace: "https://putsan.bio.link"
