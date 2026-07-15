@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/espanso/espanso/dev/schemas/match.schema.json
+
+matches:
+  # Obsidian
+  - triggers: ["[[l", "[[л", "[[д"]
+    replace: " | [[fname|alt]]"
+  # - triggers: ["»»", ")_", ")+"] # isn't work first((
+  #   replace: ">"  # Don't needed anymore, [Alt + 7] combination are better, dont know before about))
+  - triggers: ["й»", "йЮ", "q>", "йю", "ЙЮ"]
+    replace: "> [!$|$]"
+  - triggers: ["-t", "-е"]
+    replace: "- [ ]"
+    word: true
+  - triggers: ["log+", "банка+"]
+    replace: "log::💌"
