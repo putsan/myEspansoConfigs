@@ -1,0 +1,55 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/espanso/espanso/dev/schemas/match.schema.json
+
+matches:
+  # Дописування/пропозиції слова (закінчення)
+  #  - trigger: "корист"
+  #    replace: "користується"
+  #  - trigger: "корист"
+  #    replace: "користуєтеся"
+  #  - trigger: "корист"
+  #    replace: "користуюся" # доопрацювати ці Корист треба!!))
+  #  - trigger: "корист"     # бо крім того що не всі закінчення є,
+  # то ще баги прога має на ці слова чомусь..
+  # тому поки відключив ці слова
+  #    replace: "користовувати"
+  #  - trigger: "корист"
+  #    replace: "користуватися"
+  #  - trigger: "корист"
+  #    replace: "користання"
+  #  - trigger: "корист"
+  #    replace: "користовував"
+  #  - trigger: "корист"
+  #    replace: "користовують"
+  #
+  #   MILL
+  - triggers: ["бомбік", "Бомбік"]
+    replace: "Bumblbee"
+    word: true
+
+  - trigger: "оф"
+    replace: "офіційні"
+    word: true
+
+  - trigger: "анг+"
+    replace: "англомовну"
+  - trigger: "Анг+"
+    replace: "Англійську"
+  - trigger: "укр+"
+    replace: "українська"
+  - trigger: "укр+"
+    replace: "українську"
+  - trigger: "укр+"
+    replace: "українській"
+  - trigger: "утп"
+    replace: "ENG"
+
+  - trigger: "кон+"
+    replace: "конфігурацію"
+  - triggers: ["конц+", "кон+"]
+    replace: "концентрації (без сповіщень)"
+  - trigger: "реа+"
+    replace: "реалізовано"
+  - trigger: "смарт+"
+    replace: "смартфон"
+  - trigger: "альт+"
+    replace: "альтернативні"
