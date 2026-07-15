@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/espanso/espanso/dev/schemas/match.schema.json
+
+matches:
+  # Espanso
+  - triggers: ["w:t", "ц+", "ц:", "wt+"]
+    replace: "word: true"
+  - triggers: ["es2", "уі2"]
+    replace: '- triggers: ["", ""]
+      replace: "$|$"'
+  - triggers: ["cdd+", "ccdd", "cdtd", "cdt+"]
+    replace: "config changes during today"
