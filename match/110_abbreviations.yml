@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/espanso/espanso/dev/schemas/match.schema.json
+
+matches:
+  # Абревіатури
+  - triggers: ["seo", "іущ", "ІУЩ"]
+    replace: "SEO"
+  - triggers: ["foss+", "ащіі", "АЩІІ"]
+    replace: "FOSS"
+  - triggers: ["мзт", "vpn"]
+    replace: "VPN"
+  - triggers: ["usb", "гіи", "ГІИ"]
+    replace: "USB"
+  - triggers: ["тас+", "nfc", "ТАС"]
+    replace: "NFC"
+  - triggers: ["ІЗФ", "ізф"]
+    replace: "SPA"
+  - triggers: ["нгу"]
+    replace: "НГУ"
