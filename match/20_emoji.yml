@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/espanso/espanso/dev/schemas/match.schema.json
+
+matches:
+  # Emojis (most of for Obsidian)
+  - triggers: [":100", "100+"]
+    replace: "💯"
+  - triggers: [":^", "ршп+", "р+"]
+    replace: "🔺" # Obsidian
+    word: true
+  - triggers: ["ррр", hhh"]
+    replace: "⏫"
+  - triggers: ["ььь", "mmm"]
+    replace: "🔼"
+  - triggers: ["lll", "ддд"]
+    replace: "🔽"
+  - trigger: "д+"
+    replace: "⏬"
+  - triggers: ["dat+", "data+"]
+    replace: "dataview"
