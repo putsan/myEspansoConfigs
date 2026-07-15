@@ -1,0 +1,19 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/espanso/espanso/dev/schemas/match.schema.json
+
+matches:
+  # Виправлення слів та помилок
+  - triggers: ["Гуглю", "гуглю"]
+    replace: "Ґуґлю"
+    word: true
+  - triggers: ["Гугл", "гугл"]
+    replace: "Ґуґл"
+    word: true
+  - trigger: "аудіочати"
+    replace: "аудіо-чати"
+  - trigger: "свому"
+    replace: "своєму"
+
+  # Суржик-— виправлення
+  - trigger: "загружений"
+    replace: "завантажений"
+
